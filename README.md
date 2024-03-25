@@ -12,8 +12,8 @@
 - Medium - 20xp
 - Low - 2xp
 
-- Starts: March 07, 2024 Noon UTC
-- Ends: March 14, 2024 Noon UTC
+- Starts: March 28, 2024 Noon UTC
+- Ends: April 04, 2024 Noon UTC
 
 ### Stats
 
