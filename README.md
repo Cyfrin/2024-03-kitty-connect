@@ -59,8 +59,8 @@ This contract allows users to bridge their Kitty NFT from one chain to another c
 ## Quickstart
 
 ```bash
-git clone https://github.com/shikhar229169/Kitty-Connect-First-Flight.git
-cd Kitty-Connect-First-Flight
+git clone https://github.com/Cyfrin/2024-03-kitty-connect
+cd 2024-03-kitty-connect
 ```
 
 ### Install Dependencies
