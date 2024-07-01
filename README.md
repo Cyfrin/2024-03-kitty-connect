@@ -1,8 +1,6 @@
-# Kitty Connect
+# First Flight #12: Kitty Connect
 
-<p align="center">
-<img src="https://res.cloudinary.com/droqoz7lg/image/upload/q_90/dpr_2.0/c_fill,g_auto,h_320,w_320/f_auto/v1/company/lisdxtcddudcvde6sucn?_a=BATAUVAA0" width="500" alt="Kitty Connect">
-</p>
+[//]: # (contest-details-open)
 
 # Contest Details
 
@@ -38,6 +36,21 @@ This contract allows users to buy a cute cat from our branches and mint NFT for 
 
 This contract allows users to bridge their Kitty NFT from one chain to another chain via [`Chainlink CCIP`](https://docs.chain.link/ccip).
 
+# How this Project Works
+
+## Buying a Cat
+
+A user is required to visit our shop partner to buy a cat. The shop partner will call the function from KittyConnect contract to mint NFT for buying a cat. (This NFT will track all the data related to the cat)
+
+## Bridge Kitty NFT from one chain to another chain
+
+User can bridge Kitty NFT from one chain to another chain by calling this function from KittyConnect contract. This involves burning of the kitty NFT on the source chain and minting on the destination chain. Bridging is powered by chainlink CCIP.
+
+## Transferring Ownership of cat to new owner
+
+Sometimes a user wants to transfer their cat to a new owner, this can be easily done by transferring the Kitty NFT to that desired owner.
+A user is first required to approve the kitty NFT to the new owner, and is then required to visit our shop partner to finally facilitate transfer the ownership of the cat to the new owner.
+
 ## Roles in the Project:
 
 1. Cat Owner
@@ -46,6 +59,10 @@ This contract allows users to bridge their Kitty NFT from one chain to another c
    - Shop partner provide services to the cat owner to buy cat.
 3. KittyConnect Owner
    - Owner of the contract who can transfer the ownership of the contract to another address.
+  
+[//]: # (contest-details-close)
+
+[//]: # (getting-started-open)
 
 # Getting Started
 
@@ -93,21 +110,27 @@ forge coverage
 forge compile
 ```
 
-# How this Project Works
+[//]: # (getting-started-close)
 
-## Buying a Cat
+[//]: # (scope-open)
 
-A user is required to visit our shop partner to buy a cat. The shop partner will call the function from KittyConnect contract to mint NFT for buying a cat. (This NFT will track all the data related to the cat)
+# Audit Scope Details
+- In Scope:
 
-## Bridge Kitty NFT from one chain to another chain
+```
+├── src
+│   ├── KittyConnect.sol
+│   ├── KittyBridge.sol
+│   ├── base
+│      ├── KittyBridgeBase.sol
+```
 
-User can bridge Kitty NFT from one chain to another chain by calling this function from KittyConnect contract. This involves burning of the kitty NFT on the source chain and minting on the destination chain. Bridging is powered by chainlink CCIP.
+[//]: # (scope-close)
 
-## Transferring Ownership of cat to new owner
-
-Sometimes a user wants to transfer their cat to a new owner, this can be easily done by transferring the Kitty NFT to that desired owner.
-A user is first required to approve the kitty NFT to the new owner, and is then required to visit our shop partner to finally facilitate transfer the ownership of the cat to the new owner.
+[//]: # (known-issues-open)
 
 # Known Issues
 
 - there is one known bug while bridging the NFT to other chain, the previousOwners of the cat are not passed because they may cost a large amount of gas.
+
+[//]: # (known-issues-close)
