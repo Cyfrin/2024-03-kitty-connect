@@ -1,7 +1,5 @@
 # First Flight #12: Kitty Connect
 
-[//]: # (contest-details-open)
-
 # Contest Details
 
 ### Prize Pool
@@ -17,6 +15,8 @@
 
 - nSLOC: 235
 - Complexity Score: 193
+
+[//]: # (contest-details-open)
 
 # About the Project
 
